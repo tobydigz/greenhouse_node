@@ -64,10 +64,10 @@ function readData() {
     });
 }
 
-app.listen = function () {
+app.listen(port, function () {
     readData();
-};
+});
 
 
-app.listen(port);
+// app.listen(port);
 console.log('Server started! At http://localhost:' + port);
