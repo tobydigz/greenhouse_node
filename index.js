@@ -19,15 +19,15 @@ function Commands(automatic, bulb, coolingFan, exhaustFan, light, plantData, pum
 }
 
 app.get('/plant', function (req, res) {
-    res.end(commands.plantData);
+    res.end(commands.plantData + "");
 });
 
 app.get('/auto', function (req, res) {
-    res.end(commands.automatic);
+    res.end(commands.automatic + "");
 });
 
 app.get('/com', function (req, res) {
-    res.end(commands.toString());
+    res.json(commands);
 });
 
 var admin = require("firebase-admin");
