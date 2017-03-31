@@ -26,7 +26,7 @@ app.get('/auto', function (req, res) {
     res.end(commands.automatic + "");
 });
 
-app.get('/com', function (req, res) {
+app.get('/', function (req, res) {
     res.json(commands);
 });
 
